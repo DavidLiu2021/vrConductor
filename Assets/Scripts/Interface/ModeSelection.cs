@@ -10,24 +10,36 @@ public class ModeSelection : MonoBehaviour
     [SerializeField] private GameObject Screen02;
     [SerializeField] private GameObject Mode;
     [SerializeField] private GameObject ThumbUp;
-
+    // [SerializeField] private GameObject MusicalModeSelect;
+    [SerializeField] private GameObject HomePage;
     public void ClickGotIt(){
         Screen01.SetActive(false);
-        Screen02.SetActive(true);
+        Screen02.SetActive(false);
+        HomePage.SetActive(false);
+        ThumbUp.SetActive(true);
     }
 
     public void ClickStart(){
         // SceneManager.LoadScene("Scene1");
-        ThumbUp.SetActive(true);
+        // ThumbUp.SetActive(true);
+        Screen01.SetActive(false);
+        Screen02.SetActive(true);
     }
 
     public void ClickReturn(){
         Mode.SetActive(false);
     }
+
+    public void ClickSelectButton(){
+        Screen01.SetActive(true);
+        HomePage.SetActive(false);
+
+    }
     
     void Start(){
-        Screen01.SetActive(true);
+        Screen01.SetActive(false);
         Screen02.SetActive(false);
+        HomePage.SetActive(true);
         ThumbUp.SetActive(false);
     }
 }

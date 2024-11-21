@@ -9,21 +9,22 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject Home;
     [SerializeField] private GameObject Tutorial;
     
-    public void ClickDiscover(){
-        if (History != null){
-            History.SetActive(!History.activeSelf);
-        }
+    // public void ClickDiscover(){
+    //     if (History != null){
+    //         History.SetActive(!History.activeSelf);
+    //     }
 
-        Home.SetActive(false);
-        Tutorial.SetActive(false);
-    }
+    //     Home.SetActive(false);
+    //     Tutorial.SetActive(false);
+    // }
     
     public void ClickHome(){
-        if (Home != null){
-            Home.SetActive(!Home.activeSelf);
-        }
+        // if (Home != null){
+        //     Home.SetActive(!Home.activeSelf);
+        // }
+        Home.SetActive(true);
 
-        History.SetActive(false);
+        // History.SetActive(false);
         Tutorial.SetActive(false);
     }
 
@@ -33,18 +34,18 @@ public class MainMenu : MonoBehaviour
         }
 
         Home.SetActive(false);
-        History.SetActive(false);
+        // History.SetActive(false);
     }
     
 
     void Start(){
 
-        if (History != null){
-            History.SetActive(false);
-        }
+        // if (History != null){
+        //     History.SetActive(false);
+        // }
 
-        if (Home != null){
-            Home.SetActive(false);
+        if (Home = null){
+            Home.SetActive(true);
         }
         
         if (Tutorial != null){

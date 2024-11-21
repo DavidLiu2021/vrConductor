@@ -6,11 +6,13 @@ public class LogoDisplay : MonoBehaviour
 {
     [SerializeField] private GameObject logoObject;
     [SerializeField] private GameObject nextObjectToActive;
+    [SerializeField] private GameObject nextObjectToActive02;
     [SerializeField] private float waitSeconds = 3f;
 
     void Start()
     {
         nextObjectToActive.SetActive(false);
+        nextObjectToActive02.SetActive(false);
         StartCoroutine(ShowLogoTemporarily());
     }
 
@@ -22,5 +24,6 @@ public class LogoDisplay : MonoBehaviour
         logoObject.SetActive(false);
 
         nextObjectToActive.SetActive(true);
+        nextObjectToActive02.SetActive(true);
     }
 }
