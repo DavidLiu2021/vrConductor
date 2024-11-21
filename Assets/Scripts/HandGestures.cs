@@ -39,6 +39,7 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample{
         bool _WasDetected;
         bool isPlaying = true;
         bool _PerformedTriggered;
+        bool isInsideCube;
         float _TimeOfLastConditionCheck;
         float _HoldStartTime;
     
@@ -81,6 +82,17 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample{
             _HandPose = _HandShapeOrPose as XRHandPose;
         }
 
+        void OnTriggerEnter(Collider other){
+            if (other.CompareTag("VRhand")){
+                isInsideCube = true;
+            }
+        }
+        void OnTriggerExit(Collider other){
+            if (other.CompareTag("VRhand")){
+                isInsideCube = false;
+            }
+        }
+
         void OnDisable() => _HandTrackingEvents.jointsUpdated.RemoveListener(OnJointsUpdated);
     
         void OnJointsUpdated(XRHandJointsUpdatedEventArgs eventArgs){
@@ -102,7 +114,7 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample{
             _WasDetected = detected;
 
             // hand gesture detected
-            if (!_PerformedTriggered && detected){
+            if (!_PerformedTriggered && detected && isInsideCube){
                 var holdTimer = Time.timeSinceLevelLoad - _HoldStartTime;
                 if (holdTimer > _MinimumHoldTime){
                     _GesturePerformed?.Invoke();
