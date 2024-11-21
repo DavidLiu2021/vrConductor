@@ -16,6 +16,7 @@ public class HandVolumeController : MonoBehaviour
     private Transform handTransform;
     private float initialHandPosition;
     private float currentVolume;
+    private float previousHandY;
 
 
 
@@ -30,7 +31,8 @@ public class HandVolumeController : MonoBehaviour
             isHandInside = true;
 
             handTransform = other.transform;
-            initialHandPosition = handTransform.position.y;
+            // initialHandPosition = handTransform.position.y;
+            previousHandY = handTransform.position.y;
             currentVolume = audioSource.volume;
         }
     }
@@ -46,24 +48,25 @@ public class HandVolumeController : MonoBehaviour
     void Update()
     {
         if (isHandInside && handTransform != null){
-            // Debug.Log("Hand inside");
-            float handY = handTransform.position.y;
-            float normalizedYPosition = Mathf.InverseLerp(minPosition.position.y, maxPosition.position.y, handY);
+            // float handY = handTransform.position.y;
+            // float normalizedYPosition = Mathf.InverseLerp(minPosition.position.y, maxPosition.position.y, handY);
 
-            float newVolume;
-            if (handY - initialHandPosition < 0){
-                newVolume = Mathf.Lerp(currentVolume, 0f, normalizedYPosition);
-            }else{
-                newVolume = Mathf.Lerp(currentVolume, 1f, normalizedYPosition);
-            }
-            // float newVolume = Mathf.Lerp(0f, 1f, normalizedYPosition);
-            newVolume = Mathf.Clamp01(newVolume);
-            audioSource.volume = newVolume;
+            // float newVolume;
+            // if (handY - initialHandPosition < 0){
+            //     newVolume = Mathf.Lerp(currentVolume, 0f, normalizedYPosition);
+            // }else{
+            //     newVolume = Mathf.Lerp(currentVolume, 1f, normalizedYPosition);
+            // }
+            // newVolume = Mathf.Clamp01(newVolume);
+            // audioSource.volume = newVolume;
+            float currentHandY = handTransform.position.y;
+            float deltaY = currentHandY - previousHandY;
+            float newVolume = audioSource.volume + deltaY;
+
+            audioSource.volume = Mathf.Clamp01(newVolume);
+
+            previousHandY = currentHandY;
+
         }
     }
-
-    // private void OnDrawGizmos(){
-    //     Gizmos.color = Color.yellow;
-    //     Gizmos.DrawWireCube(handTransform.position, transform.localScale);
-    // }
 }

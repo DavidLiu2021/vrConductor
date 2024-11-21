@@ -9,6 +9,7 @@ public class ModeSelection : MonoBehaviour
     [SerializeField] private GameObject Screen01;
     [SerializeField] private GameObject Screen02;
     [SerializeField] private GameObject Mode;
+    [SerializeField] private GameObject ThumbUp;
 
     public void ClickGotIt(){
         Screen01.SetActive(false);
@@ -16,7 +17,8 @@ public class ModeSelection : MonoBehaviour
     }
 
     public void ClickStart(){
-        SceneManager.LoadScene("Scene1");
+        // SceneManager.LoadScene("Scene1");
+        ThumbUp.SetActive(true);
     }
 
     public void ClickReturn(){
@@ -26,5 +28,6 @@ public class ModeSelection : MonoBehaviour
     void Start(){
         Screen01.SetActive(true);
         Screen02.SetActive(false);
+        ThumbUp.SetActive(false);
     }
 }

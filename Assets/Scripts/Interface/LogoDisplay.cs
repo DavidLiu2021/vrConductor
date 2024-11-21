@@ -10,6 +10,7 @@ public class LogoDisplay : MonoBehaviour
 
     void Start()
     {
+        nextObjectToActive.SetActive(false);
         StartCoroutine(ShowLogoTemporarily());
     }
 
