@@ -10,24 +10,19 @@ public class MainMenu : MonoBehaviour
     
     
     public void ClickHome(){
-        if (Home != null){
-            Home.SetActive(!Home.activeSelf);
-        }
-
+        Home.SetActive(true);
         Library.SetActive(false);
     }
 
     public void ClickLibrary(){
-        if (Library != null){
-            Library.SetActive(!Library.activeSelf);
-        }
-
+        Library.SetActive(true);
         Home.SetActive(false);
+
     }
     
 
     void Start(){
-        if (Home = null){
+        if (Home == null){
             Home.SetActive(true);
         }
         

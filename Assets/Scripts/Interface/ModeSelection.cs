@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ModeSelection : MonoBehaviour
 {
     [SerializeField] private GameObject Mode01;
-    [SerializeField] private GameObject Mode02;
+    // [SerializeField] private GameObject Mode02;
     [SerializeField] private GameObject HomePage;
 
 
@@ -22,14 +22,14 @@ public class ModeSelection : MonoBehaviour
     /// <summary>
     /// Hompage Button02 conducting techniques
     /// </summary>
-    public void ClickSelectMode02(){
-        Mode02.SetActive(true);
-        HomePage.SetActive(false);
-    }
+    // public void ClickSelectMode02(){
+    //     Mode02.SetActive(true);
+    //     HomePage.SetActive(false);
+    // }
     
     void Start(){
         Mode01.SetActive(false);
-        Mode02.SetActive(false);
+        // Mode02.SetActive(false);
         HomePage.SetActive(true);
     }
 }

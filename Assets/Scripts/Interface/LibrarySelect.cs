@@ -15,7 +15,8 @@ public class LibrarySelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Detail01.SetActive(true);
+        Detail02.SetActive(false);
     }
 
     // Update is called once per frame
