@@ -6,40 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class ModeSelection : MonoBehaviour
 {
-    [SerializeField] private GameObject Screen01;
-    [SerializeField] private GameObject Screen02;
-    [SerializeField] private GameObject Mode;
-    [SerializeField] private GameObject ThumbUp;
-    // [SerializeField] private GameObject MusicalModeSelect;
+    [SerializeField] private GameObject Mode01;
+    [SerializeField] private GameObject Mode02;
     [SerializeField] private GameObject HomePage;
-    public void ClickGotIt(){
-        Screen01.SetActive(false);
-        Screen02.SetActive(false);
+
+
+    /// <summary>
+    /// HomePage Button01 musical Interpretation
+    /// </summary>
+    public void ClickSelectMode01(){
+        Mode01.SetActive(true);
         HomePage.SetActive(false);
-        ThumbUp.SetActive(true);
     }
 
-    public void ClickStart(){
-        // SceneManager.LoadScene("Scene1");
-        // ThumbUp.SetActive(true);
-        Screen01.SetActive(false);
-        Screen02.SetActive(true);
-    }
-
-    public void ClickReturn(){
-        Mode.SetActive(false);
-    }
-
-    public void ClickSelectButton(){
-        Screen01.SetActive(true);
+    /// <summary>
+    /// Hompage Button02 conducting techniques
+    /// </summary>
+    public void ClickSelectMode02(){
+        Mode02.SetActive(true);
         HomePage.SetActive(false);
-
     }
     
     void Start(){
-        Screen01.SetActive(false);
-        Screen02.SetActive(false);
+        Mode01.SetActive(false);
+        Mode02.SetActive(false);
         HomePage.SetActive(true);
-        ThumbUp.SetActive(false);
     }
 }

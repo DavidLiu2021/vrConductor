@@ -532,9 +532,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23916246863546893, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23916246863546893, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Intensity
+      value: 797.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 23916246863546893, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 467567349155074066, guid: 583b00253a6ce984881497785c88a537, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479470206640710820, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179737192602077395, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Intensity
+      value: 390.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179737192602077395, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6028980731650217839, guid: 583b00253a6ce984881497785c88a537, type: 3}
       propertyPath: m_LocalPosition.x
@@ -579,6 +603,66 @@ PrefabInstance:
     - target: {fileID: 6159963497166190407, guid: 583b00253a6ce984881497785c88a537, type: 3}
       propertyPath: m_Name
       value: Theatre
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7752915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.39684075
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.48443604
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.082232915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 32.389
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 75.202
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620183447630455536, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 37.324
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889703670115087840, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Intensity
+      value: 5.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023327598633232069, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120783375589642131, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Intensity
+      value: 532.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121192587494904191, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124855086478677328, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566083345172564260, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906837844767814906, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Intensity
+      value: 168.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073986070611773380, guid: 583b00253a6ce984881497785c88a537, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1172,7 +1256,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.52
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

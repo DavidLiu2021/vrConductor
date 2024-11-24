@@ -5,51 +5,34 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject History;
+    [SerializeField] private GameObject Library;
     [SerializeField] private GameObject Home;
-    [SerializeField] private GameObject Tutorial;
     
-    // public void ClickDiscover(){
-    //     if (History != null){
-    //         History.SetActive(!History.activeSelf);
-    //     }
-
-    //     Home.SetActive(false);
-    //     Tutorial.SetActive(false);
-    // }
     
     public void ClickHome(){
-        // if (Home != null){
-        //     Home.SetActive(!Home.activeSelf);
-        // }
-        Home.SetActive(true);
+        if (Home != null){
+            Home.SetActive(!Home.activeSelf);
+        }
 
-        // History.SetActive(false);
-        Tutorial.SetActive(false);
+        Library.SetActive(false);
     }
 
-    public void ClickTutorial(){
-        if (Tutorial != null){
-            Tutorial.SetActive(!Tutorial.activeSelf);
+    public void ClickLibrary(){
+        if (Library != null){
+            Library.SetActive(!Library.activeSelf);
         }
 
         Home.SetActive(false);
-        // History.SetActive(false);
     }
     
 
     void Start(){
-
-        // if (History != null){
-        //     History.SetActive(false);
-        // }
-
         if (Home = null){
             Home.SetActive(true);
         }
         
-        if (Tutorial != null){
-            Tutorial.SetActive(false);
+        if (Library != null){
+            Library.SetActive(false);
         }
     }
 }

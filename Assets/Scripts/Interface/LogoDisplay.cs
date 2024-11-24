@@ -5,14 +5,14 @@ using UnityEngine;
 public class LogoDisplay : MonoBehaviour
 {
     [SerializeField] private GameObject logoObject;
-    [SerializeField] private GameObject nextObjectToActive;
-    [SerializeField] private GameObject nextObjectToActive02;
+    [SerializeField] private GameObject MainMenu;
+    [SerializeField] private GameObject HomePage;
     [SerializeField] private float waitSeconds = 3f;
 
     void Start()
     {
-        nextObjectToActive.SetActive(false);
-        nextObjectToActive02.SetActive(false);
+        MainMenu.SetActive(false);
+        HomePage.SetActive(false);
         StartCoroutine(ShowLogoTemporarily());
     }
 
@@ -23,7 +23,7 @@ public class LogoDisplay : MonoBehaviour
 
         logoObject.SetActive(false);
 
-        nextObjectToActive.SetActive(true);
-        nextObjectToActive02.SetActive(true);
+        MainMenu.SetActive(true);
+        HomePage.SetActive(true);
     }
 }
