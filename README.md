@@ -17,11 +17,16 @@ Orchestra Odyssey is a VR conductor training app, aiming at providing guidance a
 
 ## Content
 Assets/Assets: animations, mesh, materials, and other imported assets
+
 Assets/Prefabs: character prefabs and project-defined prefabs
+
 Assets/Samples: hand tracking sample projects from Oculus
+
 Assets/Scenes: built for VR conductor
+
 Assets/Scripts: project scripts
 
 ## Example Scenes
 Scene05: Mainmenu scene
+
 Scene1: conduction training scene
